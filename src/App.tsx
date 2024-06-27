@@ -1,12 +1,13 @@
-import React from 'react'
-import Home from './page/home/Home'
+import './App.css';
+import React from 'react';
+import Home from './page/home/Home';
 
-const App = () => {
+function App() {
   return (
-    <>
+<div>
     <Home/>
-    </>
+  </div>
   )
+  
 }
-
-export default App
+export default App;
