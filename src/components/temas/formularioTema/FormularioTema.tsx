@@ -7,7 +7,7 @@ import { atualizar, buscar, cadastrar } from '../../../services/Services';
 function FormularioTema() {
   const [tema, setTema] = useState<Tema>({} as Tema);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { id } = useParams<{ id: string }>();
 
