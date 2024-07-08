@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { DNA } from 'react-loader-spinner';
+import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Postagem';
@@ -44,7 +44,7 @@ function ListaPostagens() {
   return (
     <>
       {postagens.length === 0 && (
-        <DNA
+        <Dna
           visible={true}
           height="200"
           width="200"
