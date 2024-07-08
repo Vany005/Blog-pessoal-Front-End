@@ -1,41 +1,40 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import 'react-toastify/dist/ReactToastify.css';
-import Login from './page/login/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
-import { ToastContainer } from 'react-toastify';
-import Cadastro from './page/cadastro/Cadastro';
-import Navbar from './components/navbar/Navbar';
-import Home from './page/home/Home';
+import './App.css';
 import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
+
+import { AuthProvider } from './contexts/AuthContext';
+import Cadastro from './page/cadastro/Cadastro';
+import Home from './page/home/Home';
+import Login from './page/login/Login';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
-import ListaPostagens from './components/postagens/listapostagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
-
-import Perfil from './page/perfil/Perfil';
+import ListaPostagens from './components/postagens/listapostagens/ListaPostagens';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import Perfil from './page/perfil/Perfil';
+
 function App() {
-  
   return (
     <>
       <AuthProvider>
-      <ToastContainer />
+        {}
         <BrowserRouter>
-        <Navbar />
-          <div className='min-h-[80vh]'>
+          <ToastContainer />
+          {}
+          <Navbar />
+          <div className="min-h-[80vh]">
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/temas" element={<ListaTemas />} />
-              <Route path="/cadastroTema" element={<FormularioTema />} />
+              <Route path="/formularioTema" element={<FormularioTema />} />
               <Route path="/editarTema/:id" element={<FormularioTema />} />
               <Route path="/deletarTema/:id" element={<DeletarTema />} />
               <Route path="/postagens" element={<ListaPostagens />} />
